@@ -75,7 +75,7 @@
     <Compile Include="Assets\Scripts\InteractiveItem.cs" />
     <Compile Include="Assets\Scripts\Spells\Projectile.cs" />
     <Compile Include="Assets\Scripts\MenuContoller.cs" />
-    <Compile Include="Assets\Scripts\EnemyBasicController.cs" />
+    <Compile Include="Assets\Scripts\EnemyImproved\EnemyBasicController.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyProjectile.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\gameManagerReferences.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\enemyMaster.cs" />
@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\CameraHandler.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\AIShoot.cs" />
+    <Compile Include="Assets\Scripts\EnemyImproved\handHitScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
