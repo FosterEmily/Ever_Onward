@@ -31,7 +31,9 @@ public class EnemyBasicController : MonoBehaviour
         {
             public override State Update()
             {
+                enemy.enemyAnimator.SetBool("isMoving", true);
                 enemy.enemyAnimator.SetBool("isAttacking", false);
+
 
                 enemy.myNavMeshAgent.speed = 20f;
                 //if (enemy.health <= 5) return new States.Attack3();
@@ -75,11 +77,11 @@ public class EnemyBasicController : MonoBehaviour
 
                 if(enemy.isMeleeEnemy == true || enemy.isMeleeBoss == true)
                 {
-                    enemy.myNavMeshAgent.speed = 0f;
                     enemy.enemyAnimator.SetBool("isMoving", false);
                     enemy.enemyAnimator.SetBool("isAttacking", true);
 
                     print("PAIN");
+                    enemy.myNavMeshAgent.speed = 0f;
 
                 }
 
@@ -191,7 +193,7 @@ public class EnemyBasicController : MonoBehaviour
 
     public float alert = 20;
     Vector3 danger;
-
+    private float wanderTimer =0;
 
     // Start is called before the first frame update
     void Start()
@@ -221,11 +223,13 @@ public class EnemyBasicController : MonoBehaviour
             }
             if (attackCooldown >= 0) attackCooldown -= Time.deltaTime;
 
-            if (state == null) SwitchState(new States.Idle());
-            if (state != null) SwitchState(state.Update());
 
+        if (state == null) SwitchState(new States.Idle());
+            if (state != null) SwitchState(state.Update());
+       
             CarryOutDetection();
             TurnTowardTarget();
+        
             headCheckRate = Random.Range(.8f, 1.2f);
             if (headTransform == null) headTransform = myTransform;
 
@@ -233,11 +237,11 @@ public class EnemyBasicController : MonoBehaviour
         {
             if (myTarget != null && isMeleeEnemy)
             {
-                GetComponentInParent<NavMeshAgent>().speed = 19f;
                 myNavMeshAgent.SetDestination(myTarget.position);
-                enemyAnimator.SetBool("isMoving", true);
-
+                //enemyAnimator.SetBool("isMoving", true);
             }
+
+            
 
             if (myTarget != null && isMeleeBoss)
             {
@@ -252,15 +256,13 @@ public class EnemyBasicController : MonoBehaviour
 
             if (isRangeEnemy == true && inRange == true|| isRangeBoss == true && inRange == true)
             {
-            print("DANGER");
-            print(danger);
                 Vector3 randomPoint = myTransform.position + Random.insideUnitSphere * alert;
                 if (NavMesh.SamplePosition(randomPoint, out navHit, 1.0f, NavMesh.AllAreas))
                 {
                     danger = navHit.position;
                 }
-            GetComponentInParent<NavMeshAgent>().speed = 23f;
-            if (myTarget != null) myNavMeshAgent.SetDestination(danger);
+                GetComponentInParent<NavMeshAgent>().speed = 23f;
+                if (myTarget != null) myNavMeshAgent.SetDestination(danger);
             }
 
         if (isStunned)
@@ -279,7 +281,7 @@ public class EnemyBasicController : MonoBehaviour
             }
         
         if (lockedInPlace == true) myNavMeshAgent.speed = 0;
-
+        //print(wanderTimer);
     }
 
     void SwitchState(States.State newState)
@@ -294,7 +296,7 @@ public class EnemyBasicController : MonoBehaviour
     void CheckIfIShouldWander()
     {
 
-        if (myTarget == null && !isOnRoute)
+        if (myTarget == null && !isOnRoute )
         {
 
             if (RandomWanderTarget(myTransform.position, wanderRange, out wanderTarget))
@@ -316,6 +318,7 @@ public class EnemyBasicController : MonoBehaviour
 
     bool RandomWanderTarget(Vector3 centre, float range, out Vector3 result)
     {
+
         Vector3 randomPoint = centre + Random.insideUnitSphere * wanderRange;
         if (NavMesh.SamplePosition(randomPoint, out navHit, 1.0f, NavMesh.AllAreas))
         {
@@ -328,8 +331,6 @@ public class EnemyBasicController : MonoBehaviour
             return false;
         }
     }
-
-
 
     //boolean that lets the enemy know if they can see the player
     bool CanSeeTarget(Transform potentialTarget)
@@ -504,8 +505,5 @@ public class EnemyBasicController : MonoBehaviour
 
             if (attackCooldown >= 0.001) return;
         }
-
-
-   
 
     }

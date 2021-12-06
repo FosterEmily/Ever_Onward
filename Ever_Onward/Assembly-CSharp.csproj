@@ -94,6 +94,7 @@
     <Compile Include="Assets\Scripts\CameraHandler.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\AIShoot.cs" />
     <Compile Include="Assets\Scripts\EnemyImproved\handHitScript.cs" />
+    <Compile Include="Assets\attack.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
