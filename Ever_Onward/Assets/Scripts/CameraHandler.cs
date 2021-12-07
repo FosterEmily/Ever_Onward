@@ -77,7 +77,7 @@ public class CameraHandler : MonoBehaviour
         direction.Normalize();
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawLine(cameraTransform.position, direction, Color.red, 10f);
+        //Debug.DrawLine(cameraTransform.position, direction, Color.red, 10f);
 
         // if (Physics.Raycast(ray, out hit, 10)){
             if (Physics.SphereCast(cameraPivotTransform.position, cameraSphereRadius, direction, out hit,/* Mathf.Abs(targetPosition)*/ 10, playerLayer))

@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector3 respawnPosition1;
     GameObject respawnPoint;
+    private Vector3 rotation = Vector3.zero;
 
     // private bool isCrouched = false;
     // private Vector3 crounchScale;
@@ -99,6 +100,7 @@ public class PlayerMovement : MonoBehaviour
     //Camera movements
     void UpdateMouseLook()
     {
+        print("Helloo");
         if (DialogueSystem.inConversation) return;
         Vector2 targetmouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
@@ -109,12 +111,7 @@ public class PlayerMovement : MonoBehaviour
         playerCamera.localEulerAngles = Vector3.right * cameraPitch;
         
         transform.Rotate(Vector3.up * currentMouseDelta.x * mouseSensitivity);
-        /*float mouseX = currentMouseDelta.x;
-        float mouseY = currentMouseDelta.y;
-        if (cameraHandler != null)
-        {
-            cameraHandler.HandleCameraRotation(delta, mouseX, mouseY);
-        }*/
+
     }
    
 

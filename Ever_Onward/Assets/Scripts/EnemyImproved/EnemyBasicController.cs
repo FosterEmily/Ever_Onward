@@ -31,12 +31,50 @@ public class EnemyBasicController : MonoBehaviour
         {
             public override State Update()
             {
-                enemy.enemyAnimator.SetBool("isMoving", true);
+                enemy.enemyAnimator.SetBool("isIdle", true);
+                enemy.enemyAnimator.SetBool("isMoving", false);
                 enemy.enemyAnimator.SetBool("isAttacking", false);
 
 
                 enemy.myNavMeshAgent.speed = 20f;
                 //if (enemy.health <= 5) return new States.Attack3();
+                if (enemy.isOnRoute == true) return new States.Walk();
+                if (enemy.isChasing == true) return new States.Walk();
+                if (enemy.enemySeen && enemy.isRangeEnemy || enemy.enemySeen && enemy.isRangeBoss) return new States.RangeAttack();
+                else if (enemy.inRange) return new States.MeleeAttack();
+                return null;
+            }
+        }
+
+        public class Walk : State
+        {
+            public override State Update()
+            {
+                enemy.enemyAnimator.SetBool("isMoving", true);
+                if(enemy.isChasing == true)
+                {
+                    if (enemy.isRangeEnemy == true || enemy.isRangeBoss == true)
+                    {
+                        enemy.myNavMeshAgent.speed = 18f;
+                    }
+                    if (enemy.isMeleeEnemy == true || enemy.isMeleeBoss == true)
+                    {
+                        enemy.myNavMeshAgent.speed = 22f;
+                    }
+                }
+
+                if (!enemy.isChasing)
+                {
+                    if (enemy.isRangeEnemy == true || enemy.isRangeBoss == true)
+                    {
+                        enemy.myNavMeshAgent.speed = 10f;
+                    }
+                    if (enemy.isMeleeEnemy == true || enemy.isMeleeBoss == true)
+                    {
+                        enemy.myNavMeshAgent.speed = 10f;
+                    }
+                }
+
                 if (enemy.enemySeen && enemy.isRangeEnemy || enemy.enemySeen && enemy.isRangeBoss) return new States.RangeAttack();
                 else if (enemy.inRange) return new States.MeleeAttack();
                 return null;
@@ -52,10 +90,9 @@ public class EnemyBasicController : MonoBehaviour
                 {
                     enemy.SpawnProjectile(.75f);
                 }
-                //enemy.myNavMeshAgent.speed = 2.5f;
 
                 //transition
-                if (enemy.health <= 5) return new States.Attack3();
+                if (enemy.health <= 5) return new States.GroundSlam();
                 if (!enemy.enemySeen) return new States.Idle();
                 if (enemy.inRange) return new States.MeleeAttack();
 
@@ -79,10 +116,7 @@ public class EnemyBasicController : MonoBehaviour
                 {
                     enemy.enemyAnimator.SetBool("isMoving", false);
                     enemy.enemyAnimator.SetBool("isAttacking", true);
-
-                    print("PAIN");
                     enemy.myNavMeshAgent.speed = 0f;
-
                 }
 
                 if (!enemy.enemySeen) return new States.Idle();
@@ -93,12 +127,11 @@ public class EnemyBasicController : MonoBehaviour
 
             }
         
-            public class Attack3 : State
+            public class GroundSlam : State
             {
                 public override State Update()
                 {
-
-
+                    
 
                     if (enemy.healthSystem >= 75) return new States.Idle();
                     return null;
@@ -193,7 +226,8 @@ public class EnemyBasicController : MonoBehaviour
 
     public float alert = 20;
     Vector3 danger;
-    private float wanderTimer =0;
+    private float wanderTimer = 0;
+    private bool isChasing;
 
     // Start is called before the first frame update
     void Start()
@@ -215,73 +249,63 @@ public class EnemyBasicController : MonoBehaviour
 
     void Update()
     {
-      
-            if (Time.time > wanderNextCheck)
-            {
-                CheckIfIShouldWander();
-                wanderNextCheck = Time.time + wanderCheckRate;
-            }
-            if (attackCooldown >= 0) attackCooldown -= Time.deltaTime;
+        headCheckRate = Random.Range(.8f, 1.2f);
+        //print(isChasing);
+        if (Time.time > wanderNextCheck)
+        {
+            CheckIfIShouldWander();
+            wanderNextCheck = Time.time + wanderCheckRate;
+        }
+        if (attackCooldown >= 0) attackCooldown -= Time.deltaTime;
 
 
         if (state == null) SwitchState(new States.Idle());
-            if (state != null) SwitchState(state.Update());
+        if (state != null) SwitchState(state.Update());
        
-            CarryOutDetection();
-            TurnTowardTarget();
+        CarryOutDetection();
+        TurnTowardTarget();
         
-            headCheckRate = Random.Range(.8f, 1.2f);
-            if (headTransform == null) headTransform = myTransform;
+        if (headTransform == null) headTransform = myTransform;
 
         if (isMeleeEnemy == true || isMeleeBoss == true)
         {
-            if (myTarget != null && isMeleeEnemy)
-            {
-                myNavMeshAgent.SetDestination(myTarget.position);
-                //enemyAnimator.SetBool("isMoving", true);
-            }
-
-            
-
-            if (myTarget != null && isMeleeBoss)
-            {
-                GetComponentInParent<NavMeshAgent>().speed = 10f;
-                myNavMeshAgent.SetDestination(myTarget.position);
-            }
+            if (myTarget != null) myNavMeshAgent.SetDestination(myTarget.position);
         }
-            if (isRangeEnemy == true || isRangeBoss == true)
-            {
-                if (myTarget != null) myNavMeshAgent.SetDestination(myTransform.position);
-            }
+        
+        if (isRangeEnemy == true || isRangeBoss == true)
+        {
+            if (myTarget != null) myNavMeshAgent.SetDestination(myTransform.position);
+        }
 
-            if (isRangeEnemy == true && inRange == true|| isRangeBoss == true && inRange == true)
+        if (isRangeEnemy == true && inRange == true|| isRangeBoss == true && inRange == true)
+        {
+            Vector3 randomPoint = myTransform.position + Random.insideUnitSphere * alert;
+            if (NavMesh.SamplePosition(randomPoint, out navHit, 1.0f, NavMesh.AllAreas))
             {
-                Vector3 randomPoint = myTransform.position + Random.insideUnitSphere * alert;
-                if (NavMesh.SamplePosition(randomPoint, out navHit, 1.0f, NavMesh.AllAreas))
-                {
-                    danger = navHit.position;
-                }
-                GetComponentInParent<NavMeshAgent>().speed = 23f;
-                if (myTarget != null) myNavMeshAgent.SetDestination(danger);
+                danger = navHit.position;
             }
+            GetComponentInParent<NavMeshAgent>().speed = 23f;
+            if (myTarget != null) myNavMeshAgent.SetDestination(danger);
+        }
 
         if (isStunned)
+        {
+            if (GetComponentInParent<NavMeshAgent>().speed != 0) saveSpeed = GetComponentInParent<NavMeshAgent>().speed;
+
+            GetComponentInParent<NavMeshAgent>().speed = 0;
+            siphonStunTimer -= Time.deltaTime;
+            if (siphonStunTimer <= 0)
             {
-                if (GetComponentInParent<NavMeshAgent>().speed != 0) saveSpeed = GetComponentInParent<NavMeshAgent>().speed;
+                GetComponentInParent<NavMeshAgent>().speed = saveSpeed;
+                isStunned = false;
+                siphonStunTimer = 3f;
 
-                GetComponentInParent<NavMeshAgent>().speed = 0;
-                siphonStunTimer -= Time.deltaTime;
-                if (siphonStunTimer <= 0)
-                {
-                    GetComponentInParent<NavMeshAgent>().speed = saveSpeed;
-                    isStunned = false;
-                    siphonStunTimer = 3f;
-
-                }
             }
+            isChasing = false;
+        }
         
         if (lockedInPlace == true) myNavMeshAgent.speed = 0;
-        //print(wanderTimer);
+
     }
 
     void SwitchState(States.State newState)
@@ -304,6 +328,7 @@ public class EnemyBasicController : MonoBehaviour
                 myNavMeshAgent.SetDestination(wanderTarget);
                 isOnRoute = true;
                 myNavMeshAgent.speed = 5f;
+                isChasing = false;
             }
         }
         else if (isOnRoute)
@@ -323,11 +348,13 @@ public class EnemyBasicController : MonoBehaviour
         if (NavMesh.SamplePosition(randomPoint, out navHit, 1.0f, NavMesh.AllAreas))
         {
             result = navHit.position;
+            isChasing = false;
             return true;
         }
         else
         {
             result = centre;
+            isChasing = false;
             return false;
         }
     }
@@ -341,12 +368,14 @@ public class EnemyBasicController : MonoBehaviour
             {
                 myTarget = potentialTarget;
                 enemySeen = true;
+                isChasing = true;
                 return true;
             }
             else
             {
                 enemySeen = false;
                 myTarget = null;
+                isChasing = false;
                 return false;
             }
         }
@@ -354,6 +383,7 @@ public class EnemyBasicController : MonoBehaviour
         {
             enemySeen = false;
             myTarget = null;
+            isChasing = false;
             return false;
         }
     }
@@ -384,6 +414,7 @@ public class EnemyBasicController : MonoBehaviour
             {
                 enemySeen = false;
                 myTarget = null;
+                isChasing = false;
                 
             }
             //when player is close to the enemy
