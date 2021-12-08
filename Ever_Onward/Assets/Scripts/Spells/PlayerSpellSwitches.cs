@@ -14,6 +14,11 @@ public class PlayerSpellSwitches : MonoBehaviour
     private CharacterController player;
     GameObject spawnPoint;
 
+    public AudioClip windProjectile;
+    public AudioClip grassProjectile;
+    public AudioClip lightSpell;
+    public AudioClip lightSpell2;
+
     private float proj = 0;
     //public DialogueSystem dialogue;
    
@@ -452,6 +457,7 @@ public class PlayerSpellSwitches : MonoBehaviour
         
         Projectile p = Instantiate(WindProjectile, spawnPoint.transform.position, Camera.main.transform.rotation);
         p.InitBullet(Camera.main.transform.forward * 30);
+        AudioSource.PlayClipAtPoint(windProjectile, transform.position);
     }
 
     void SpawnGrassProjectile()
@@ -460,7 +466,7 @@ public class PlayerSpellSwitches : MonoBehaviour
 
         Projectile p = Instantiate(GrassProjectile, spawnPoint.transform.position, Camera.main.transform.rotation);
         p.InitBullet(Camera.main.transform.forward * 20);
-
+        AudioSource.PlayClipAtPoint(grassProjectile, transform.position);
 
     }
 
@@ -473,6 +479,8 @@ public class PlayerSpellSwitches : MonoBehaviour
             case "light":
                 if (lightCooldown > 0) return;
                 AOE a = Instantiate(LightAOE, transform.position, Quaternion.identity);
+                AudioSource.PlayClipAtPoint(lightSpell, transform.position);
+                AudioSource.PlayClipAtPoint(lightSpell2, transform.position);
                 break;
             case "bramble":
                 if (BrambleBlastCooldown > 0) return;

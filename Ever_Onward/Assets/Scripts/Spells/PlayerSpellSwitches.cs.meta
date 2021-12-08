@@ -3,7 +3,23 @@ guid: fbbfe19024e428b49aa24703a29bc986
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerAnimator: {instanceID: 0}
+  - activeSpell: {instanceID: 0}
+  - windImg: {instanceID: 0}
+  - lightImg: {instanceID: 0}
+  - natureImg: {instanceID: 0}
+  - whirlwindImg: {instanceID: 0}
+  - brambleImg: {instanceID: 0}
+  - siphonImg: {instanceID: 0}
+  - WindProjectile: {instanceID: 0}
+  - GrassProjectile: {instanceID: 0}
+  - LightAOE: {instanceID: 0}
+  - BrambleAOE: {instanceID: 0}
+  - SiphonAOE: {instanceID: 0}
+  - windProjectile: {fileID: 8300000, guid: 1980f0a0626816b48b05d8df433c6bff, type: 3}
+  - grassProjectile: {instanceID: 0}
+  - lightSpell: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
