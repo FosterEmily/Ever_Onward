@@ -80,10 +80,10 @@ public class CameraHandler : MonoBehaviour
         //Debug.DrawLine(cameraTransform.position, direction, Color.red, 10f);
 
         // if (Physics.Raycast(ray, out hit, 10)){
-            if (Physics.SphereCast(cameraPivotTransform.position, cameraSphereRadius, direction, out hit,/* Mathf.Abs(targetPosition)*/ 10, playerLayer))
+            if (Physics.SphereCast(cameraPivotTransform.position, cameraSphereRadius, direction, out hit,/* Mathf.Abs(targetPosition)*/ 5, playerLayer))
             {
 
-                print("I hits");
+               // print("I hits");
                 float dis = Vector3.Distance(cameraPivotTransform.position, hit.point);
                 targetPosition = -(dis - cameraCollisionOffset);
             }
@@ -91,6 +91,7 @@ public class CameraHandler : MonoBehaviour
             if (Mathf.Abs(targetPosition) < minimumCollisionOffset)
             {
                 targetPosition = -minimumCollisionOffset;
+            print(targetPosition);
             }
 
          //}   

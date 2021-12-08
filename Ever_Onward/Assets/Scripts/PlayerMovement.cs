@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
     //Camera movements
     void UpdateMouseLook()
     {
-        print("Helloo");
+
         if (DialogueSystem.inConversation) return;
         Vector2 targetmouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
