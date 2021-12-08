@@ -15,11 +15,11 @@ C:/Users/lays3/Desktop/EVER_ONWARD/IDEK/Ever_Onward/Ever_Onward
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53786
+53823
 Successfully changed project path to: C:/Users/lays3/Desktop/EVER_ONWARD/IDEK/Ever_Onward/Ever_Onward
 C:/Users/lays3/Desktop/EVER_ONWARD/IDEK/Ever_Onward/Ever_Onward
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 42.57 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 57.90 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -35,24 +35,250 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56128
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56696
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003015 seconds.
+Registered in 0.002674 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 38.31 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 40.58 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.529 seconds
+- Completed reload, in  1.493 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002548 seconds.
+Registered in 0.001574 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.188 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1254 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 174.2 MB.
+System memory in use after: 174.3 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1717.
+Total: 2.202400 ms (FindLiveObjects: 0.151600 ms CreateObjectMapping: 0.047600 ms MarkObjects: 1.934100 ms  DeleteObjects: 0.067800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Clark_Final_Models/M_Stonepile.obj
+  artifactKey: Guid(56fc70c41c69fb14f8f45186f5b17bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Stonepile.obj using Guid(56fc70c41c69fb14f8f45186f5b17bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '273133855208442ec574b2bb729cd67b') in 0.849248 seconds
+  Import took 0.852031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009042 seconds.
+  path: Assets/Clark_Final_Models/M_Icicle.obj
+  artifactKey: Guid(5c852791f5eec184087bb95a0779629c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Icicle.obj using Guid(5c852791f5eec184087bb95a0779629c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9a86fd5d79f8b27deabee128a6b3b77') in 0.022483 seconds
+  Import took 0.025770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Clark_Final_Models/M_Snowrock.obj
+  artifactKey: Guid(ada557e6237a4a348ab4f41e1187dc23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Snowrock.obj using Guid(ada557e6237a4a348ab4f41e1187dc23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcd21fe4273ae9ffc5d4373530788c43') in 0.022522 seconds
+  Import took 0.024963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Clark_Final_Models/M_Snowdrift bank2.obj
+  artifactKey: Guid(2eb226843b155a347bc74ab12408b225) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Snowdrift bank2.obj using Guid(2eb226843b155a347bc74ab12408b225) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e70f4b1d9b1deb0f34bcef9e24bb7992') in 0.040828 seconds
+  Import took 0.043785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Clark_Final_Models/M_Sstone_1.fbx
+  artifactKey: Guid(b6972ac437b01354c8503fe3e9fb0b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Sstone_1.fbx using Guid(b6972ac437b01354c8503fe3e9fb0b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e7f51c2c050dbfb2a606afc3c5721fa') in 0.073375 seconds
+  Import took 0.075944 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Clark_Final_Models/M_Iciclemulti.obj
+  artifactKey: Guid(2e5e928ec48aee94082d23cdb21ded6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Iciclemulti.obj using Guid(2e5e928ec48aee94082d23cdb21ded6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab333c9e4a1ee62c4d294f6077bb7297') in 0.028933 seconds
+  Import took 0.031504 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Clark_Final_Models/M_Lstone_1.obj
+  artifactKey: Guid(977efe1b75cbad14889167852fb4fad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Lstone_1.obj using Guid(977efe1b75cbad14889167852fb4fad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '628860c67d06c7c4ab9efe6c65e764ba') in 0.053103 seconds
+  Import took 0.055472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Clark_Final_Models/M_Sstone_3.fbx
+  artifactKey: Guid(aafe6390616fd264da9254cfc02b1146) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Sstone_3.fbx using Guid(aafe6390616fd264da9254cfc02b1146) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd25e037238c637f2b0a9aec2bfd45027') in 0.094737 seconds
+  Import took 0.097356 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Clark_Final_Models/M_Mstone_1 REtopo.obj
+  artifactKey: Guid(be5fcc6566c2dc4419b600abcee996be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Mstone_1 REtopo.obj using Guid(be5fcc6566c2dc4419b600abcee996be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00897d3f2c982949bea6df78be32e8b5') in 0.034510 seconds
+  Import took 0.037263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Clark_Final_Models/M_stalagmite.obj
+  artifactKey: Guid(ae3b3128681929d4fa6a5d7c0eb1a6a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_stalagmite.obj using Guid(ae3b3128681929d4fa6a5d7c0eb1a6a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f59696b7e6e43a91490575f2d79a70d') in 0.032503 seconds
+  Import took 0.035153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Clark_Final_Models/M_Lstone_3 Retopo.obj
+  artifactKey: Guid(19e19f53ff19a1041a83a580ff368ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Lstone_3 Retopo.obj using Guid(19e19f53ff19a1041a83a580ff368ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea96bf0c6b75b45870ec0158116283e1') in 0.041983 seconds
+  Import took 0.044932 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Clark_Final_Models/M_Longsnowdrift.obj
+  artifactKey: Guid(a9d4bb65424bbfd4eaeb5b505f41bcd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Longsnowdrift.obj using Guid(a9d4bb65424bbfd4eaeb5b505f41bcd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9ac60028d3d3b95bd730b4cee7e47e1') in 0.038405 seconds
+  Import took 0.040911 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Clark_Final_Models/M_Mstone_3 REtopo.obj
+  artifactKey: Guid(927d37bc3fe91bd43b8725068e7b7c83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Mstone_3 REtopo.obj using Guid(927d37bc3fe91bd43b8725068e7b7c83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a97149a2107ceb312fbba5d7d27c338') in 0.040586 seconds
+  Import took 0.043531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Clark_Textures
+  artifactKey: Guid(fed84717f6f472348a0f5f5a36818e7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Textures using Guid(fed84717f6f472348a0f5f5a36818e7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36cbc8efb916e16b064a73d3903f6e81') in 0.014045 seconds
+  Import took 0.017946 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Clark_Final_Models/M_Mstone_2 REtopo.obj
+  artifactKey: Guid(6d0a479537678b24c879f04740154fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Mstone_2 REtopo.obj using Guid(6d0a479537678b24c879f04740154fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2b7533a5aaeb16a9fa4894f829133dc') in 0.046503 seconds
+  Import took 0.049936 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Clark_Final_Models/M_Lstone_2 Retopo.obj
+  artifactKey: Guid(6bdbfcd1b9edb3d4489cacf72a28fbe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Lstone_2 Retopo.obj using Guid(6bdbfcd1b9edb3d4489cacf72a28fbe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a1451bfc7109beba4cd7011d625c3be') in 0.034611 seconds
+  Import took 0.037027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Clark_Final_Models/M_G_Rock.obj
+  artifactKey: Guid(d22b1fd95c77bd34d997f36443206954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_G_Rock.obj using Guid(d22b1fd95c77bd34d997f36443206954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97e2bc09de1c5d8ffcf554258807d2ea') in 0.060293 seconds
+  Import took 0.064770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003474 seconds.
+  path: Assets/Clark_Final_Models/M_Sstone_2.fbx
+  artifactKey: Guid(134c79162e509ff489e4cfcebb2ba685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Sstone_2.fbx using Guid(134c79162e509ff489e4cfcebb2ba685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c57056cf928a765b49ec6d6956ab752') in 0.085603 seconds
+  Import took 0.109801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007573 seconds.
+  path: Assets/Clark_Final_Models/M_Stalactite.obj
+  artifactKey: Guid(b4a6701f7410a724a9f57d8759ca9a91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/M_Stalactite.obj using Guid(b4a6701f7410a724a9f57d8759ca9a91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9370c7d328e3d051e45c0e6b7ef0fd72') in 0.099316 seconds
+  Import took 0.146776 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000781 seconds.
+  path: Assets/Clark_Final_Models
+  artifactKey: Guid(efce8f452e296fe4e8b8a64bf39b2bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models using Guid(efce8f452e296fe4e8b8a64bf39b2bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82157bc7971a846f866a8da0a176639b') in 0.016412 seconds
+  Import took 0.025562 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002793 seconds.
+  path: Assets/Clark_Final_Models/torch.fbx
+  artifactKey: Guid(c8621d6027d23d0449528b699686de69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Clark_Final_Models/torch.fbx using Guid(c8621d6027d23d0449528b699686de69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8c0764146ce4733c7a5cf766c4b728f') in 0.121306 seconds
+  Import took 0.125094 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.464128 seconds.
+  path: Assets/Darth_Artisan
+  artifactKey: Guid(fbc8236cc84ccf747a446ed4d448056c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Darth_Artisan using Guid(fbc8236cc84ccf747a446ed4d448056c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7021ec96d02888e8bd9c12f504308a73') in 0.020013 seconds
+  Import took 0.029366 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.350431 seconds.
+  path: Assets/Darth_Artisan/Free_Trees
+  artifactKey: Guid(0933d3dbb00ff6247afbfb0a67d4934b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Darth_Artisan/Free_Trees using Guid(0933d3dbb00ff6247afbfb0a67d4934b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a33e5fd1d8d4ed3136bf529761e555c8') in 0.014703 seconds
+  Import took 0.016987 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.070499 seconds.
+  path: Assets/Darth_Artisan/Free_Trees/Meshes
+  artifactKey: Guid(6fa63b51843b26e4783e2eec89b98b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Darth_Artisan/Free_Trees/Meshes using Guid(6fa63b51843b26e4783e2eec89b98b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec1a8219ee9c8da9a92db71b0ffc404c') in 0.017534 seconds
+  Import took 0.020487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.824827 seconds.
+  path: Assets/attack.cs
+  artifactKey: Guid(e1e563bfb4c0c7f4bba298a54d6f8683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/attack.cs using Guid(e1e563bfb4c0c7f4bba298a54d6f8683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '427b0ea9c6ff462e3d30cfade3e9e271') in 0.175251 seconds
+  Import took 0.178058 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001430 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
@@ -62,49 +288,63 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.249 seconds
+- Completed reload, in  0.995 seconds
 Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.52 seconds
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1253 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 174.2 MB.
-System memory in use after: 174.3 MB.
+Unloading 1221 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 176.7 MB.
+System memory in use after: 176.8 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1716.
-Total: 4.140900 ms (FindLiveObjects: 1.301900 ms CreateObjectMapping: 0.448000 ms MarkObjects: 2.316700 ms  DeleteObjects: 0.072400 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Assest/Character/Player_Spring/Spring@Falling Idle.fbx
-  artifactKey: Guid(3320488d8a4c5804f90beb0f6c5d9997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assest/Character/Player_Spring/Spring@Falling Idle.fbx using Guid(3320488d8a4c5804f90beb0f6c5d9997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74de532a3796537c07eab18fd7997e7e') in 1.130731 seconds
-  Import took 1.133787 seconds .
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1761.
+Total: 2.286400 ms (FindLiveObjects: 0.287700 ms CreateObjectMapping: 0.074000 ms MarkObjects: 1.720900 ms  DeleteObjects: 0.202100 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.016760 seconds.
-  path: Assets/Assest/Character/Player_Spring/Spring@Standing React Death Forward.fbx
-  artifactKey: Guid(f04830bdb37018648b0db42b35d38a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assest/Character/Player_Spring/Spring@Standing React Death Forward.fbx using Guid(f04830bdb37018648b0db42b35d38a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b6c1bb721d599a32b8c166b9d7de5bf') in 0.041095 seconds
-  Import took 0.048017 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000953 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.423 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1221 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 176.8 MB.
+System memory in use after: 176.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1763.
+Total: 1.819200 ms (FindLiveObjects: 0.168200 ms CreateObjectMapping: 0.048800 ms MarkObjects: 1.535600 ms  DeleteObjects: 0.064900 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000059 seconds.
-  path: Assets/Assest/Character/Player_Spring/Spring.fbx
-  artifactKey: Guid(43d7fb947061f124c9e7e8165b39c373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assest/Character/Player_Spring/Spring.fbx using Guid(43d7fb947061f124c9e7e8165b39c373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a7b157f0588ac31c91a00506142c394') in 0.055046 seconds
-  Import took 0.059268 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001163 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.729 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1221 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 176.8 MB.
+System memory in use after: 176.8 MB.
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/Assest/Character/Player_Spring/SpringMaterial.mat
-  artifactKey: Guid(0dc11d78d65f4584cbb528677c513569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assest/Character/Player_Spring/SpringMaterial.mat using Guid(0dc11d78d65f4584cbb528677c513569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c753460bb1468cdf3ccb9242ec215e36') in 0.134720 seconds
-  Import took 0.137207 seconds .
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1765.
+Total: 1.736400 ms (FindLiveObjects: 0.145900 ms CreateObjectMapping: 0.041900 ms MarkObjects: 1.490400 ms  DeleteObjects: 0.056800 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
