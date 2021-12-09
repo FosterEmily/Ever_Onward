@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: 1196f51e0f64df649ae25590e24a587d
+  - enabled: 1
+    path: Assets/Scenes/EastWing.unity
+    guid: 415e27c7c3bb70e4fba1d94cc0eec82f
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
