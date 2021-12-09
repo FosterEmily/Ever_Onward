@@ -12,6 +12,8 @@ public class MenuContoller : MonoBehaviour
     GameObject loading;
     GameObject music;
     GameObject pauseMenu;
+    GameObject mainMenu;
+    GameObject pauseText;
     public void Start()
     {
         optionsMenu = GameObject.Find("Settings");
@@ -21,6 +23,8 @@ public class MenuContoller : MonoBehaviour
         loading = GameObject.Find("Loading");
         music = GameObject.Find("Music");
         pauseMenu = GameObject.Find("PauseMenu");
+        mainMenu = GameObject.Find("MainMenu");
+        pauseText = GameObject.Find("Pause");
         optionsMenu.SetActive(false);
         loading.SetActive(false);
         pauseMenu.SetActive(false);
@@ -60,7 +64,12 @@ public class MenuContoller : MonoBehaviour
 
     public void InGameOptions()
     {
+        mainMenu.SetActive(!mainMenu.activeSelf);
         optionsMenu.SetActive(!optionsMenu.activeSelf);
+        playButton.SetActive(!playButton.activeSelf);
+        optionsButton.SetActive(!optionsButton.activeSelf);
+        quitButton.SetActive(!quitButton.activeSelf);
+        pauseText.SetActive(!pauseText.activeSelf);
     }
     public void Inventory()
     {

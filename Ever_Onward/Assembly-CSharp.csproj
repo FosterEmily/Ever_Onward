@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyNavDestinationReached.cs" />
     <Compile Include="Assets\Scripts\Spells\ComboScript.cs" />
     <Compile Include="Assets\Scripts\Dialogue System\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\EastTrigger.cs" />
     <Compile Include="Assets\Scripts\Settings.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\canvasScript.cs" />
     <Compile Include="Assets\Scripts\Spells\PlayerSpellSwitches.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyDetection.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\InteractiveItem.cs" />
     <Compile Include="Assets\Scripts\Spells\Projectile.cs" />
+    <Compile Include="Assets\siphonDetector.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\MenuContoller.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\EnemyImproved\EnemyBasicController.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyProjectile.cs" />
@@ -95,7 +97,6 @@
     <Compile Include="Assets\Scripts\Master Scripts\CameraHandler.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\AIShoot.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\EnemyImproved\handHitScript.cs" />
-    <Compile Include="Assets\siphonDetector.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -114,6 +115,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />

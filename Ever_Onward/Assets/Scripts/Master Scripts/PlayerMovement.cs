@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+        PlayerPrefs.GetString("spawnLoc");
 
         respawnPoint = GameObject.Find("RespawnPoint1");
         respawnPosition1 = respawnPoint.transform.position;
@@ -70,30 +71,32 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        delta = Time.fixedDeltaTime;
-        if (cameraHandler != null)
+        if (Time.timeScale == 1)
         {
-            cameraHandler.FollowTarget(delta);
-            //cameraHandler.HandleCameraRotation(delta);
+            delta = Time.fixedDeltaTime;
+            if (cameraHandler != null)
+            {
+                cameraHandler.FollowTarget(delta);
+                //cameraHandler.HandleCameraRotation(delta);
+            }
+            UpdateMouseLook();
+
+
+            if (transform.position.y <= -50)
+            {
+                //print("work fcker");
+                //print("heres yer position " + transform.position.ToString());
+                print("respawn here " + respawnPosition1);
+                transform.position = respawnPosition1;
+
+
+
+            }
+            else
+            {
+                UpdateMovement();
+            }
         }
-        UpdateMouseLook();
-
-
-        if (transform.position.y <= -50)
-        {
-            //print("work fcker");
-            //print("heres yer position " + transform.position.ToString());
-            print("respawn here " + respawnPosition1);
-            transform.position = respawnPosition1;
-
-
-
-        }
-        else
-        {
-            UpdateMovement();
-        }
-
 
     }
 

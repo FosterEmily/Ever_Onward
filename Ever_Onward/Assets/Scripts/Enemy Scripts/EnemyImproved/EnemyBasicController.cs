@@ -235,6 +235,7 @@ public class EnemyBasicController : MonoBehaviour
     Vector3 danger;
     private float wanderTimer = 0;
     private bool isChasing;
+    public Transform startLoc;
 
     // Start is called before the first frame update
     void Start()
