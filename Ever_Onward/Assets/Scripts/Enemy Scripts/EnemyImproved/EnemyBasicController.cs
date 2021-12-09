@@ -31,12 +31,11 @@ public class EnemyBasicController : MonoBehaviour
         {
             public override State Update()
             {
+                print("IS IDLING");
                 enemy.enemyAnimator.SetBool("isIdle", true);
                 enemy.enemyAnimator.SetBool("isMoving", false);
                 enemy.enemyAnimator.SetBool("isAttacking", false);
 
-
-                enemy.myNavMeshAgent.speed = 20f;
                 //if (enemy.health <= 5) return new States.Attack3();
                 if (enemy.isOnRoute == true) return new States.Walk();
                 if (enemy.isChasing == true) return new States.Walk();
@@ -50,6 +49,8 @@ public class EnemyBasicController : MonoBehaviour
         {
             public override State Update()
             {
+                print("IS WALKING");
+                enemy.enemyAnimator.SetBool("isIdle", false);
                 enemy.enemyAnimator.SetBool("isMoving", true);
                 if(enemy.isChasing == true)
                 {
@@ -57,10 +58,11 @@ public class EnemyBasicController : MonoBehaviour
                     {
                         enemy.myNavMeshAgent.speed = 18f;
                     }
-                    if (enemy.isMeleeEnemy == true || enemy.isMeleeBoss == true)
+                    if (enemy.isMeleeEnemy == true )
                     {
                         enemy.myNavMeshAgent.speed = 22f;
                     }
+                    if(enemy.isMeleeBoss == true) enemy.myNavMeshAgent.speed = 15f;
                 }
 
                 if (!enemy.isChasing)
@@ -76,6 +78,7 @@ public class EnemyBasicController : MonoBehaviour
                 }
 
                 if (enemy.enemySeen && enemy.isRangeEnemy || enemy.enemySeen && enemy.isRangeBoss) return new States.RangeAttack();
+                if (enemy.isAtStartLoc == true) return new States.Idle();
                 else if (enemy.inRange) return new States.MeleeAttack();
                 return null;
             }
@@ -192,6 +195,7 @@ public class EnemyBasicController : MonoBehaviour
 
     //Layer Masks
     public LayerMask playerLayer;
+    public LayerMask enemyLayer;
     public LayerMask sightLayer;
 
     private NavMeshAgent myNavMeshAgent;
@@ -225,10 +229,14 @@ public class EnemyBasicController : MonoBehaviour
     public bool isMeleeBoss = false;
     public bool isRangeBoss = false;
 
+    private bool isAtStartLoc;
+    private float startLocRange = 1f;
+
     public float alert = 20;
     Vector3 danger;
     private float wanderTimer = 0;
     private bool isChasing;
+    //private Transform startLocation;
     
     // Start is called before the first frame update
     void Start()
@@ -245,13 +253,13 @@ public class EnemyBasicController : MonoBehaviour
         thisMat = GetComponent<Renderer>().material;
         currentlyAssignedMaterials = GetComponent<Renderer>().materials;
         theseMats = GetComponent<Renderer>().materials;
-
     }
 
-    void Update()
+    public void Update()
     {
+        print(isAtStartLoc);
         headCheckRate = Random.Range(.8f, 1.2f);
-        //print(isChasing);
+
         if (Time.time > wanderNextCheck && !isMeleeBoss && !isRangeBoss)
         {
             CheckIfIShouldWander();
@@ -270,9 +278,23 @@ public class EnemyBasicController : MonoBehaviour
 
         if (isMeleeEnemy == true || isMeleeBoss == true)
         {
-            if (myTarget != null) { myNavMeshAgent.SetDestination(myTarget.position); isOnRoute = true; }
-            if (isMeleeBoss == true && myTarget == null) { myNavMeshAgent.SetDestination(startLoc.position); isOnRoute = false; }
-            if (isOnRoute == false) { /*enemyAnimator.SetBool("isIdle", true); enemyAnimator.SetBool("isMoving", false); */ print("Apple"); }
+            if (myTarget != null) { myNavMeshAgent.SetDestination(myTarget.position); isOnRoute = true; isAtStartLoc = false; }
+            if (isMeleeBoss == true && myTarget == null) 
+            { 
+                myNavMeshAgent.SetDestination(startLoc.position);
+                Collider[] colliders = Physics.OverlapSphere(startLoc.position, startLocRange, enemyLayer);
+                if (colliders.Length > 0)
+                {
+                    isAtStartLoc = true;
+                    isOnRoute = false;
+                }
+                else
+                {
+                    isAtStartLoc = false;
+                    isOnRoute = true;
+                }
+               // if (myTransform.position == startLoc.position) isAtStartLoc = true;
+            }
             }
         
         if (isRangeEnemy == true || isRangeBoss == true)

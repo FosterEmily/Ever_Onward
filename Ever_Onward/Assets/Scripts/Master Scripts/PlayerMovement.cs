@@ -70,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
         delta = Time.fixedDeltaTime;
         if (cameraHandler != null)
         {
@@ -86,6 +87,8 @@ public class PlayerMovement : MonoBehaviour
             print("respawn here " + respawnPosition1);
             transform.position = respawnPosition1;
 
+
+
         }
         else
         {
@@ -98,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
     //Camera movements
     void UpdateMouseLook()
     {
-        print("Helloo");
+        //print("Helloo");
         if (DialogueSystem.inConversation) return;
         Vector2 targetmouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 

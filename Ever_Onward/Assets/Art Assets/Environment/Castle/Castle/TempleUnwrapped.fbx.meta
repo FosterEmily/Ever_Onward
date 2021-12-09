@@ -3,7 +3,62 @@ guid: d537ea3ea1cbb7e4e976e47681f27ba7
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Doors, Door Frames, and Pillars
+    second: {fileID: 2100000, guid: a72839fb61a1ff74384dfd47bccb6507, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Environment Decor
+    second: {fileID: 2100000, guid: 21d5f6c8625b8ba45943d60f4cb3e363, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: fe9d68182d223524dbd108fecdb82a8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gates
+    second: {fileID: 2100000, guid: 50c24442348b0584ea4f973076c4494f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Interior Walls & Floors
+    second: {fileID: 2100000, guid: ccf09522ac330c94bb1b55b3e96fd4e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Interior2
+    second: {fileID: 2100000, guid: 697fa2d89abe7214b9bbe4d2e51c09bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Outer Walls
+    second: {fileID: 2100000, guid: b544e9febba79e747b396000478328de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OuterWall2
+    second: {fileID: 2100000, guid: 8f956be7c17aec04aa285f1920a65e62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roofs
+    second: {fileID: 2100000, guid: 6b25437808fbd344faf7a9b7ac313537, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roofs2
+    second: {fileID: 2100000, guid: 128251bc9db8b76459838c72770dc439, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stair Wells
+    second: {fileID: 2100000, guid: 8d3839557d35b4a48a7d309e632f1d62, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
