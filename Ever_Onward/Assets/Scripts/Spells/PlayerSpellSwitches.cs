@@ -344,8 +344,8 @@ public class PlayerSpellSwitches : MonoBehaviour
                     brambleBlastCombo = false;
 
 
-                    if (Input.GetButton("Shortcut2")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.BrambleBlast : SpellState.Grass;
-                    if (Input.GetButton("Shortcut3")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.Whirlwind : SpellState.Light;
+                    if (Input.GetButton("Shortcut2")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.BrambleBlast : SpellState.Grass;
+                    if (Input.GetButton("Shortcut3")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.Whirlwind : SpellState.Light;
 
                     break;
 
@@ -359,8 +359,8 @@ public class PlayerSpellSwitches : MonoBehaviour
                     seedSiphonCombo = false;
                     brambleBlastCombo = false;
 
-                    if (Input.GetButton("Shortcut1")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.BrambleBlast : SpellState.Wind;
-                    if (Input.GetButton("Shortcut3")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.Whirlwind : SpellState.Light;
+                    if (Input.GetButton("Shortcut1")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.BrambleBlast : SpellState.Wind;
+                    if (Input.GetButton("Shortcut3")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.Whirlwind : SpellState.Light;
 
 
 
@@ -376,8 +376,8 @@ public class PlayerSpellSwitches : MonoBehaviour
                     brambleBlastCombo = false;
 
                     activeSpell.sprite = lightImg;
-                    if (Input.GetButton("Shortcut1")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.BrambleBlast : SpellState.Wind;
-                    if (Input.GetButton("Shortcut2")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.SeedSiphon : SpellState.Grass;
+                    if (Input.GetButton("Shortcut1")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.BrambleBlast : SpellState.Wind;
+                    if (Input.GetButton("Shortcut2")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.SeedSiphon : SpellState.Grass;
 
 
                     break;
@@ -394,9 +394,9 @@ public class PlayerSpellSwitches : MonoBehaviour
                     activeSpell.sprite = whirlwindImg;
 
                     // if (WhirlwindCooldown <= 0) currentSpellState = SpellState.Wind;
-                    if (Input.GetButton("Shortcut1")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.BrambleBlast : SpellState.Wind;
-                    if (Input.GetButton("Shortcut2")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.SeedSiphon : SpellState.Grass;
-                    if (Input.GetButton("Shortcut3")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.Whirlwind : SpellState.Light;
+                    if (Input.GetButton("Shortcut1")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.BrambleBlast : SpellState.Wind;
+                    if (Input.GetButton("Shortcut2")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.SeedSiphon : SpellState.Grass;
+                    if (Input.GetButton("Shortcut3")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.Whirlwind : SpellState.Light;
 
                     break;
 
@@ -413,9 +413,9 @@ public class PlayerSpellSwitches : MonoBehaviour
 
                     //print("Seeds!");
                     // if (SeedSiphonCooldown <= 0) currentSpellState = SpellState.Light;
-                    if (Input.GetButton("Shortcut1")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.BrambleBlast : SpellState.Wind;
-                    if (Input.GetButton("Shortcut2")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.SeedSiphon : SpellState.Grass;
-                    if (Input.GetButton("Shortcut3")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.Whirlwind : SpellState.Light;
+                    if (Input.GetButton("Shortcut1")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.BrambleBlast : SpellState.Wind;
+                    if (Input.GetButton("Shortcut2")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.SeedSiphon : SpellState.Grass;
+                    if (Input.GetButton("Shortcut3")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.Whirlwind : SpellState.Light;
 
                     break;
 
@@ -430,9 +430,9 @@ public class PlayerSpellSwitches : MonoBehaviour
 
                     activeSpell.sprite = brambleImg;
                     //print("Brambles!");
-                    if (Input.GetButton("Shortcut1")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.BrambleBlast : SpellState.Wind;
-                    if (Input.GetButton("Shortcut2")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.SeedSiphon : SpellState.Grass;
-                    if (Input.GetButton("Shortcut3")) currentSpellState = (Input.GetKey(KeyCode.LeftShift)) ? SpellState.Whirlwind : SpellState.Light;
+                    if (Input.GetButton("Shortcut1")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.BrambleBlast : SpellState.Wind;
+                    if (Input.GetButton("Shortcut2")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.SeedSiphon : SpellState.Grass;
+                    if (Input.GetButton("Shortcut3")) currentSpellState = (Input.GetKey(KeyCode.Tab)) ? SpellState.Whirlwind : SpellState.Light;
                     // if (BrambleBlastCooldown <= 0) currentSpellState = SpellState.Grass;
 
                     break;

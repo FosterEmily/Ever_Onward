@@ -108,4 +108,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f9ffa87f75853488b9821f51be0e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeSpan: 1
   type: siphon

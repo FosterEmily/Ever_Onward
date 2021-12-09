@@ -156,7 +156,6 @@ public class EnemyBasicController : MonoBehaviour
     }
 
     public Animator enemyAnimator;
-    public Transform startLoc;
 
     public Projectile prefabProjectile;
     private States.State state;
@@ -236,8 +235,7 @@ public class EnemyBasicController : MonoBehaviour
     Vector3 danger;
     private float wanderTimer = 0;
     private bool isChasing;
-    //private Transform startLocation;
-    
+
     // Start is called before the first frame update
     void Start()
     {

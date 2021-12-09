@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 respawnPosition1;
     GameObject respawnPoint;
     private Vector3 rotation = Vector3.zero;
-
     // private bool isCrouched = false;
     // private Vector3 crounchScale;
 
@@ -53,9 +52,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         controller = GetComponent<CharacterController>();
         cameraHandler = CameraHandler.singleton;
-
         //locks cursor to the middle of the screen and remove the icon
         if (lockCursor)
         {
@@ -119,6 +118,22 @@ public class PlayerMovement : MonoBehaviour
     //Character Movement
     void UpdateMovement()
     {
+        /*if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            optionsMenu.SetActive(false);
+            if (Time.timeScale == 1)
+            {
+                Time.timeScale = 0;
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                Time.timeScale = 1;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            pauseMenu.SetActive(!pauseMenu.activeSelf);
+            Cursor.visible = !Cursor.visible;
+        }*/
         if (DialogueSystem.inConversation)
         {
             return;
