@@ -3,7 +3,12 @@ guid: a9d4bb65424bbfd4eaeb5b505f41bcd2
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: retopolongsnowdriftMat
+    second: {fileID: 2100000, guid: 31b680f58ec64ee409239469edfac714, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
