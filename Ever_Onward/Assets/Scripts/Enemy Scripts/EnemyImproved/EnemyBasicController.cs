@@ -153,7 +153,6 @@ public class EnemyBasicController : MonoBehaviour
     }
 
     public Animator enemyAnimator;
-    public Transform startLoc;
 
     public Projectile prefabProjectile;
     private States.State state;
@@ -229,7 +228,7 @@ public class EnemyBasicController : MonoBehaviour
     Vector3 danger;
     private float wanderTimer = 0;
     private bool isChasing;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -252,7 +251,7 @@ public class EnemyBasicController : MonoBehaviour
     {
         headCheckRate = Random.Range(.8f, 1.2f);
         //print(isChasing);
-        if (Time.time > wanderNextCheck && !isMeleeBoss && !isRangeBoss)
+        if (Time.time > wanderNextCheck)
         {
             CheckIfIShouldWander();
             wanderNextCheck = Time.time + wanderCheckRate;
@@ -270,10 +269,8 @@ public class EnemyBasicController : MonoBehaviour
 
         if (isMeleeEnemy == true || isMeleeBoss == true)
         {
-            if (myTarget != null) { myNavMeshAgent.SetDestination(myTarget.position); isOnRoute = true; }
-            if (isMeleeBoss == true && myTarget == null) { myNavMeshAgent.SetDestination(startLoc.position); isOnRoute = false; }
-            if (isOnRoute == false) { /*enemyAnimator.SetBool("isIdle", true); enemyAnimator.SetBool("isMoving", false); */ print("Apple"); }
-            }
+            if (myTarget != null) myNavMeshAgent.SetDestination(myTarget.position);
+        }
         
         if (isRangeEnemy == true || isRangeBoss == true)
         {

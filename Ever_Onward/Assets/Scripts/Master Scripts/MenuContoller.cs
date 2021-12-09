@@ -9,17 +9,24 @@ public class MenuContoller : MonoBehaviour
     GameObject playButton;
     GameObject optionsButton;
     GameObject quitButton;
+    GameObject loading;
+    GameObject music;
     public void Start()
     {
         optionsMenu = GameObject.Find("Settings");
         playButton = GameObject.Find("Play");
         optionsButton = GameObject.Find("Options");
         quitButton = GameObject.Find("Quit");
+        loading = GameObject.Find("Loading");
+        music = GameObject.Find("Music");
         optionsMenu.SetActive(!optionsMenu.activeSelf);
+        loading.SetActive(!loading.activeSelf);
     }
     public void Play()
     {
-        SceneManager.LoadScene("Forest");
+        loading.SetActive(true);
+        music.SetActive(false);
+        SceneManager.LoadSceneAsync("Forest");
     }
 
     public void Options()
