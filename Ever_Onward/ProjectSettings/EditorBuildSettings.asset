@@ -8,15 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 60951ee0297525840b138499a55433d7
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 1196f51e0f64df649ae25590e24a587d
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Mansion.unity
-    guid: 38e3b13797b811b4096597f8f3d66815
-  - enabled: 1
-    path: Assets/Scenes/Rooftop.unity
-    guid: 4493c40f4bc4ff1489a052089cf86495
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: 84629db7e2e353640a61bdb96be933ef
