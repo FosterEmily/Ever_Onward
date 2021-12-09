@@ -49,10 +49,10 @@ public class AOE : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Enemy" && other.GetComponentInChildren<AIDamage>() != null)
-        {
-            if(!other.GetComponentInChildren<AIDamage>().isStunned) enemiesInRange++;
-        }
+        //if(other.tag == "Enemy" && other.GetComponentInChildren<EnemyBasicController>() != null)
+        //{
+            //if(!other.GetComponentInChildren<EnemyBasicController>().isStunned) enemiesInRange++;
+        //}
     }
 
     private float Lerp(float a, float b, float interval)

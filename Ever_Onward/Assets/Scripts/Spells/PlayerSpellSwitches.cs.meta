@@ -6,20 +6,21 @@ MonoImporter:
   defaultReferences:
   - playerAnimator: {instanceID: 0}
   - activeSpell: {instanceID: 0}
-  - windImg: {instanceID: 0}
-  - lightImg: {instanceID: 0}
-  - natureImg: {instanceID: 0}
-  - whirlwindImg: {instanceID: 0}
-  - brambleImg: {instanceID: 0}
-  - siphonImg: {instanceID: 0}
-  - WindProjectile: {instanceID: 0}
-  - GrassProjectile: {instanceID: 0}
-  - LightAOE: {instanceID: 0}
-  - BrambleAOE: {instanceID: 0}
-  - SiphonAOE: {instanceID: 0}
+  - windImg: {fileID: 21300000, guid: b69bffd221fc01046b7b27fb333b90bb, type: 3}
+  - lightImg: {fileID: 21300000, guid: cfd1ab087af38344fb5501bc50678f46, type: 3}
+  - natureImg: {fileID: 21300000, guid: 483d8b0e642a4e4469abdaed2adb193a, type: 3}
+  - whirlwindImg: {fileID: 21300000, guid: 30ec36bc2055c7f43ae50b189dc72866, type: 3}
+  - brambleImg: {fileID: 21300000, guid: 71c848d2ec51ecb468351dd8d6fd936c, type: 3}
+  - siphonImg: {fileID: 21300000, guid: 5532d594312cb62459d77cc4dd240e25, type: 3}
+  - WindProjectile: {fileID: 5898925111313634789, guid: a3ce537c7b69a854aa937df2cf88dd87, type: 3}
+  - GrassProjectile: {fileID: 5898925111313634789, guid: 9f02568186ec6514fae69c25018d2ce0, type: 3}
+  - LightAOE: {fileID: 9197786561545400143, guid: 894f0fbcb1931f54e8352b077f5dabd3, type: 3}
+  - BrambleAOE: {fileID: -8155002045792043750, guid: 38b9fca5e94c9054e9685a7476b7c9a7, type: 3}
+  - SiphonAOE: {fileID: -8155002045792043750, guid: 9a1745f3138a6e149a4fdfea3d6d7438, type: 3}
   - windProjectile: {fileID: 8300000, guid: 1980f0a0626816b48b05d8df433c6bff, type: 3}
   - grassProjectile: {instanceID: 0}
   - lightSpell: {instanceID: 0}
+  - lightSpell2: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

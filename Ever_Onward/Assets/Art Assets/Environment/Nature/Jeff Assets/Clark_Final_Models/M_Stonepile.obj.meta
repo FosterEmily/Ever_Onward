@@ -3,7 +3,12 @@ guid: 56fc70c41c69fb14f8f45186f5b17bc3
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: irregularStones001Mat
+    second: {fileID: 2100000, guid: dcce80b62627d5c42abc23fd8c786d3e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

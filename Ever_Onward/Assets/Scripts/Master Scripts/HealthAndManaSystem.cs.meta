@@ -3,7 +3,20 @@ guid: d6bba5a7f0fe7734f802cb8e5bda1504
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - heart1: {instanceID: 0}
+  - heart2: {instanceID: 0}
+  - heart3: {instanceID: 0}
+  - heartFull: {fileID: 21300000, guid: 0b5217862b1181f4abc2d362f7753a15, type: 3}
+  - heartHalf: {fileID: 21300000, guid: 7d508bc31a78d51439dcde28a94fa29e, type: 3}
+  - heartEmpty: {fileID: 21300000, guid: dc39edb7f848f3245b36dcb862f48ee4, type: 3}
+  - mana1: {instanceID: 0}
+  - mana2: {instanceID: 0}
+  - mana3: {instanceID: 0}
+  - manaFull: {fileID: 21300000, guid: 00fb172e031c1294a84e81858ae5aa99, type: 3}
+  - manaHalf: {fileID: 21300000, guid: 14845f15558611446ac4f6f44d9b3d2f, type: 3}
+  - manaEmpty: {fileID: 21300000, guid: 4c80ef67f99a81d419d19b8493ccc516, type: 3}
+  - myTransform: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
