@@ -16,6 +16,8 @@ public class MenuContoller : MonoBehaviour
     GameObject pauseText;
     GameObject controlButton;
     GameObject creditButton;
+    GameObject controlsPopUp;
+    GameObject creditsPopUp;
     public void Start()
     {
         optionsMenu = GameObject.Find("Settings");
@@ -29,9 +31,13 @@ public class MenuContoller : MonoBehaviour
         pauseText = GameObject.Find("Pause");
         controlButton = GameObject.Find("Controls");
         creditButton = GameObject.Find("Credits");
+        controlsPopUp = GameObject.Find("ControlsPopUp");
+        creditsPopUp = GameObject.Find("CreditsPopUp");
         optionsMenu.SetActive(false);
         loading.SetActive(false);
         if (pauseMenu != null) pauseMenu.SetActive(false);
+        if (controlsPopUp != null) controlsPopUp.SetActive(false);
+        if (creditsPopUp != null) creditsPopUp.SetActive(false);
     }
     public void Update()
     {
@@ -61,6 +67,26 @@ public class MenuContoller : MonoBehaviour
     public void Options()
     {
         optionsMenu.SetActive(!optionsMenu.activeSelf);
+        playButton.SetActive(!playButton.activeSelf);
+        optionsButton.SetActive(!optionsButton.activeSelf);
+        quitButton.SetActive(!quitButton.activeSelf);
+        creditButton.SetActive(!creditButton.activeSelf);
+        controlButton.SetActive(!controlButton.activeSelf);
+    }
+
+    public void Controls()
+    {
+        controlsPopUp.SetActive(!controlsPopUp.activeSelf);
+        playButton.SetActive(!playButton.activeSelf);
+        optionsButton.SetActive(!optionsButton.activeSelf);
+        quitButton.SetActive(!quitButton.activeSelf);
+        creditButton.SetActive(!creditButton.activeSelf);
+        controlButton.SetActive(!controlButton.activeSelf);
+    }
+
+    public void Credits()
+    {
+        creditsPopUp.SetActive(!creditsPopUp.activeSelf);
         playButton.SetActive(!playButton.activeSelf);
         optionsButton.SetActive(!optionsButton.activeSelf);
         quitButton.SetActive(!quitButton.activeSelf);

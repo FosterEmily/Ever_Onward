@@ -49819,6 +49819,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1742863729540600322, guid: 0086ac5be9a18fe42bc5ecfb092324c2, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 1795711402774475792, guid: 0086ac5be9a18fe42bc5ecfb092324c2, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -50042,6 +50046,10 @@ PrefabInstance:
     - target: {fileID: 3807222871912506939, guid: 0086ac5be9a18fe42bc5ecfb092324c2, type: 3}
       propertyPath: m_StoppingDistance
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807222872063872912, guid: 0086ac5be9a18fe42bc5ecfb092324c2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3849905929054644724, guid: 0086ac5be9a18fe42bc5ecfb092324c2, type: 3}
       propertyPath: m_Layer

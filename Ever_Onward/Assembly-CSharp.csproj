@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\MainMenuPrefs.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\AIShoot.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\EnemyImproved\handHitScript.cs" />
+    <Compile Include="Assets\Scripts\Triggers\EndTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

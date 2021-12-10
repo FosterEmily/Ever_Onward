@@ -56,24 +56,24 @@ public class EnemyBasicController : MonoBehaviour
                 {
                     if (enemy.isRangeEnemy == true || enemy.isRangeBoss == true)
                     {
-                        enemy.myNavMeshAgent.speed = 14f;
+                        enemy.myNavMeshAgent.speed = 8f;
                     }
                     if (enemy.isMeleeEnemy == true )
                     {
-                        enemy.myNavMeshAgent.speed = 16f;
+                        enemy.myNavMeshAgent.speed = 9f;
                     }
-                    if(enemy.isMeleeBoss == true) enemy.myNavMeshAgent.speed = 15f;
+                    if(enemy.isMeleeBoss == true) enemy.myNavMeshAgent.speed = 12f;
                 }
 
                 if (!enemy.isChasing)
                 {
                     if (enemy.isRangeEnemy == true || enemy.isRangeBoss == true)
                     {
-                        enemy.myNavMeshAgent.speed = 10f;
+                        enemy.myNavMeshAgent.speed = 5f;
                     }
                     if (enemy.isMeleeEnemy == true || enemy.isMeleeBoss == true)
                     {
-                        enemy.myNavMeshAgent.speed = 10f;
+                        enemy.myNavMeshAgent.speed = 6f;
                     }
                 }
 
