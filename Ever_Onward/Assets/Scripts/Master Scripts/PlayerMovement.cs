@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController cc;
     public Animator springAnimator;
     public float mouseSensitivity = 3.5f;
-    public float walkSpeed = 24.0f;
+    public float walkSpeed = 18.0f;
     public float gravity = -20.0f;
     [SerializeField] [Range(0.0f, 0.5f)] float moveSmoothTime = 0.3f;
     [SerializeField] [Range(0.0f, 0.5f)] float mouseSmoothTime = 0.03f;
@@ -157,7 +157,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
         {
             springAnimator.SetBool("isMoving", false);
-            walkSpeed = 0;
+            walkSpeed = 8f;
         }
         else
         {
@@ -165,13 +165,13 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.LeftShift) && controller.isGrounded)
             {
 
-                walkSpeed = 30.0f;
+                walkSpeed = 15.0f;
 
             }
             if (!Input.GetKey(KeyCode.LeftShift) && controller.isGrounded)
             {
 
-                walkSpeed = 24.0f;
+                walkSpeed = 19.0f;
 
             }
         }
