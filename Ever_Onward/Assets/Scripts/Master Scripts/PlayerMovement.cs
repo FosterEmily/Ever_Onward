@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public static int LightsOn = 0;
 
     public bool lockCursor = true;
+    public GameObject loading;
+    public GameObject music;
 
     float cameraPitch = 0.0f;
     float velocityY = 0.0f;
@@ -76,6 +78,8 @@ public class PlayerMovement : MonoBehaviour
             Cursor.visible = false;
         }
         PlayerPrefs.GetString("spawnLoc");
+        music = GameObject.Find("Music");
+
 
 
 
@@ -83,9 +87,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
+        
         if (Time.timeScale == 1)
         {
+            if(HealthAndManaSystem.health <= 0)
+            {
+                loading.SetActive(true);
+                music.SetActive(false);
+                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+            }
             delta = Time.fixedDeltaTime;
             if (cameraHandler != null)
             {
@@ -94,13 +104,22 @@ public class PlayerMovement : MonoBehaviour
             }
             UpdateMouseLook();
 
-
+            //Respawns player after falling into abyss
             if (transform.position.y <= -50)
             {
                 //print("work fcker");
                 //print("heres yer position " + transform.position.ToString());
-                print("respawn here " + respawnPosition1);
-                transform.position = respawnPosition1;
+                if(SceneManager.GetActiveScene().name == "Forest")
+                {
+                    HealthAndManaSystem.health = 0;
+                }
+                else
+                {
+                    //print("respawn here " + respawnPosition1);
+                    HealthAndManaSystem.health--;
+                    transform.position = respawnPosition1;
+                }
+
 
 
 

@@ -7,6 +7,7 @@ public class MainMenuPrefs : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.DeleteAll();
         PlayerPrefs.SetString("spawnLoc", "Hub");
         PlayerPrefs.SetString("isWestDead", "false");
         PlayerPrefs.SetString("isEastDead", "false");

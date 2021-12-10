@@ -8625,6 +8625,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3536000167587201156, guid: a9bfe0efd467e954897e90d5010241f6, type: 3}
+      propertyPath: loading
+      value: 
+      objectReference: {fileID: 2206863749350177377}
+    - target: {fileID: 3536000167587201156, guid: a9bfe0efd467e954897e90d5010241f6, type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1677935405}
@@ -9258,7 +9262,7 @@ MonoBehaviour:
   enemyAnimator: {fileID: 806457837}
   prefabProjectile: {fileID: 8293061771214357886, guid: 013b2ed2ecb9d324e99955732478bcfb, type: 3}
   attackTarget: {fileID: 568022474}
-  health: 10
+  health: 5
   healthSystem: 0
   tester: 20
   lockedInPlace: 0
@@ -12582,7 +12586,7 @@ MonoBehaviour:
   enemyAnimator: {fileID: 1095638075}
   prefabProjectile: {fileID: 8293061771214357886, guid: 013b2ed2ecb9d324e99955732478bcfb, type: 3}
   attackTarget: {fileID: 568022474}
-  health: 10
+  health: 5
   healthSystem: 0
   tester: 20
   lockedInPlace: 0
@@ -12854,6 +12858,10 @@ PrefabInstance:
       propertyPath: PM
       value: 
       objectReference: {fileID: 529383542}
+    - target: {fileID: 5865752889850422508, guid: c663aeff601b7cf42a7a6687021df9d7, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5865752889850422508, guid: c663aeff601b7cf42a7a6687021df9d7, type: 3}
       propertyPath: attackTarget
       value: 
@@ -22024,7 +22032,7 @@ MonoBehaviour:
   enemyAnimator: {fileID: 1931599521}
   prefabProjectile: {fileID: 8293061771214357886, guid: 013b2ed2ecb9d324e99955732478bcfb, type: 3}
   attackTarget: {fileID: 568022474}
-  health: 10
+  health: 5
   healthSystem: 0
   tester: 20
   lockedInPlace: 0
@@ -24289,6 +24297,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 529383542}
     - target: {fileID: 5865752889850422508, guid: c663aeff601b7cf42a7a6687021df9d7, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865752889850422508, guid: c663aeff601b7cf42a7a6687021df9d7, type: 3}
       propertyPath: attackTarget
       value: 
       objectReference: {fileID: 568022474}
@@ -24314,7 +24326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6263924691944408338, guid: c663aeff601b7cf42a7a6687021df9d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.95965
+      value: 21.12
       objectReference: {fileID: 0}
     - target: {fileID: 6263924691944408338, guid: c663aeff601b7cf42a7a6687021df9d7, type: 3}
       propertyPath: m_LocalPosition.z

@@ -24,8 +24,8 @@ public class plantDetector : MonoBehaviour
         {
             anim.SetBool("isWilted", false);
             //rend.material.color = Color.red;
-            Invoke("SetAddCollision", 2f);
-            Invoke("DisableCollision", 15f);
+            Invoke("SetAddCollision", 1f);
+            Invoke("DisableCollision", 12f);
         }
     }
 
