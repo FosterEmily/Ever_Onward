@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyNavDestinationReached.cs" />
     <Compile Include="Assets\Scripts\Spells\ComboScript.cs" />
     <Compile Include="Assets\Scripts\Dialogue System\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Triggers\WestBossTrigger.cs" />
     <Compile Include="Assets\Scripts\Light Pylons\LPylon1.cs" />
     <Compile Include="Assets\Scripts\Triggers\EastTrigger.cs" />
     <Compile Include="Assets\Scripts\Settings.cs" />
@@ -86,7 +87,6 @@
     <Compile Include="Assets\Scripts\Master Scripts\enemyMaster.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyText.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyNavWander.cs" />
-    <Compile Include="Assets\Scripts\Spells\LightPylon.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyFire.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\gameManagerMaster.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\AIDamage.cs" />
@@ -102,7 +102,7 @@
     <Compile Include="Assets\Scripts\MainMenuPrefs.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\AIShoot.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\EnemyImproved\handHitScript.cs" />
-    <Compile Include="Assets\Scripts\Triggers\WestBossTrigger.cs" />
+    <Compile Include="Assets\Scripts\Triggers\EndTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
