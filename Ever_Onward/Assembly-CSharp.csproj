@@ -96,13 +96,13 @@
     <Compile Include="Assets\Scripts\Spells\plantDetector.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\Knockback.cs" />
+    <Compile Include="Assets\Scripts\Triggers\EndTrigger.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\enemySprite.cs" />
     <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\CameraHandler.cs" />
     <Compile Include="Assets\Scripts\MainMenuPrefs.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\AIShoot.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\EnemyImproved\handHitScript.cs" />
-    <Compile Include="Assets\Scripts\Triggers\EndTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
