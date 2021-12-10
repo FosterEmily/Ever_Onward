@@ -106,6 +106,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7334659199378828220, guid: 78b062f03af674c48a8dbe07d590227e, type: 3}
+      propertyPath: m_Intensity
+      value: 5.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7425171084731016735, guid: 78b062f03af674c48a8dbe07d590227e, type: 3}
       propertyPath: LightsModule.light
       value: 
