@@ -12,6 +12,7 @@ TagManager:
   - Bramble
   - EnemyBullet
   - RespawnPlane
+  - Light
   layers:
   - Default
   - TransparentFX
