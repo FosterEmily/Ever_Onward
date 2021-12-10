@@ -56,16 +56,18 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\WestTrigger.cs" />
+    <Compile Include="Assets\Scripts\Triggers\WestTrigger.cs" />
     <Compile Include="Assets\Scripts\Dialogue System\DialogueSystem.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\HealthAndManaSystem.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyNavDestinationReached.cs" />
     <Compile Include="Assets\Scripts\Spells\ComboScript.cs" />
     <Compile Include="Assets\Scripts\Dialogue System\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\EastTrigger.cs" />
+    <Compile Include="Assets\Scripts\Light Pylons\LPylon1.cs" />
+    <Compile Include="Assets\Scripts\Triggers\EastTrigger.cs" />
     <Compile Include="Assets\Scripts\Settings.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\canvasScript.cs" />
     <Compile Include="Assets\Scripts\Spells\PlayerSpellSwitches.cs" />
+    <Compile Include="Assets\Scripts\Triggers\EastExitTrigger.cs" />
     <Compile Include="Assets\Scripts\Spells\lightDetector.cs" />
     <Compile Include="Assets\Scripts\Spells\AOE.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\Raycasting.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="Assets\Scripts\Master Scripts\MenuContoller.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\EnemyImproved\EnemyBasicController.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyProjectile.cs" />
+    <Compile Include="Assets\Scripts\Triggers\WestExitTrigger.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\gameManagerReferences.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\enemyMaster.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyText.cs" />
@@ -95,10 +98,10 @@
     <Compile Include="Assets\Scripts\Enemy Scripts\enemySprite.cs" />
     <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\CameraHandler.cs" />
+    <Compile Include="Assets\Scripts\MainMenuPrefs.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\AIShoot.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\EnemyImproved\handHitScript.cs" />
-    <Compile Include="Assets\Scripts\EastExitTrigger.cs" />
-    <Compile Include="Assets\Scripts\Spells\LightPylon.cs" />
+    <Compile Include="Assets\Scripts\Triggers\WestBossTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

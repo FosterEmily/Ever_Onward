@@ -179,7 +179,7 @@ public class PlayerSpellSwitches : MonoBehaviour
                 if (spell.lightPressed)
                 {
                     //print("LIGHT CLASS");
-                    if (Input.GetButtonDown("Fire1") && !DialogueSystem.inConversation && HealthAndManaSystem.mana > 0 && HealthAndManaSystem.health < 6)
+                    if (Input.GetButtonDown("Fire1") && !DialogueSystem.inConversation && HealthAndManaSystem.mana > 0)
                     {
                         spell.SpawnAOE("light");
                         HealthAndManaSystem.mana--;
