@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Settings.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\canvasScript.cs" />
     <Compile Include="Assets\Scripts\Spells\PlayerSpellSwitches.cs" />
+    <Compile Include="Assets\Scripts\EastExitTrigger.cs" />
     <Compile Include="Assets\Scripts\Spells\lightDetector.cs" />
     <Compile Include="Assets\Scripts\Spells\AOE.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\Raycasting.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets\Scripts\Master Scripts\enemyMaster.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyText.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyNavWander.cs" />
+    <Compile Include="Assets\Scripts\Spells\LightPylon.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\enemyFire.cs" />
     <Compile Include="Assets\Scripts\Master Scripts\gameManagerMaster.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\AIDamage.cs" />
@@ -97,8 +99,6 @@
     <Compile Include="Assets\Scripts\Master Scripts\CameraHandler.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\AIShoot.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\EnemyImproved\handHitScript.cs" />
-    <Compile Include="Assets\Scripts\EastExitTrigger.cs" />
-    <Compile Include="Assets\Scripts\Spells\LightPylon.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

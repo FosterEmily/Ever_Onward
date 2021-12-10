@@ -3,7 +3,12 @@ guid: 2eb226843b155a347bc74ab12408b225
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: snowdrift_bank2retopoMat
+    second: {fileID: 2100000, guid: ec08d24f2f2244643b573e2966680a95, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
