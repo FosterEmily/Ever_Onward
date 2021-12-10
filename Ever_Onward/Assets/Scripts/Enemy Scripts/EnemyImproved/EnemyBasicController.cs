@@ -31,7 +31,7 @@ public class EnemyBasicController : MonoBehaviour
         {
             public override State Update()
             {
-                print("IS IDLING");
+                //print("IS IDLING");
                 enemy.enemyAnimator.SetBool("isIdle", true);
                 enemy.enemyAnimator.SetBool("isMoving", false);
                 enemy.enemyAnimator.SetBool("isAttacking", false);
@@ -49,7 +49,7 @@ public class EnemyBasicController : MonoBehaviour
         {
             public override State Update()
             {
-                print("IS WALKING");
+                //print("IS WALKING");
                 enemy.enemyAnimator.SetBool("isIdle", false);
                 enemy.enemyAnimator.SetBool("isMoving", true);
                 if(enemy.isChasing == true)
@@ -258,7 +258,7 @@ public class EnemyBasicController : MonoBehaviour
 
     public void Update()
     {
-        print(isAtStartLoc);
+        //print(isAtStartLoc);
         headCheckRate = Random.Range(.8f, 1.2f);
 
         if (Time.time > wanderNextCheck && !isMeleeBoss && !isRangeBoss)

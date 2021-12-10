@@ -20528,6 +20528,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 321727007869503446, guid: f0330dbe5eb1f384e8f68623d819a546, type: 3}
   m_PrefabInstance: {fileID: 134394070}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &867115277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7423434671451986316, guid: 345b49d88911e5e488e5bf37aadf6795, type: 3}
+  m_PrefabInstance: {fileID: 1182298998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &867115278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867115277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284496e9aa06a1444963a4e9763a4f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueTrigger: {fileID: 867115279}
+--- !u!114 &867115279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867115277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 645c175064bf27d4897003de88c57830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - Activate the five Light Plyons with your 'Light' Spell to unlock the Door
+--- !u!135 &867115280
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867115277}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &870154961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28595,15 +28642,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5038797763150294655, guid: d9ed067bb61ab8242ad6e44aaeb83545, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.772461
+      value: -15.72
       objectReference: {fileID: 0}
     - target: {fileID: 5038797763150294655, guid: d9ed067bb61ab8242ad6e44aaeb83545, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5960388
+      value: -2.25
       objectReference: {fileID: 0}
     - target: {fileID: 5038797763150294655, guid: d9ed067bb61ab8242ad6e44aaeb83545, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -75.260376
+      value: -76.25
       objectReference: {fileID: 0}
     - target: {fileID: 5038797763150294655, guid: d9ed067bb61ab8242ad6e44aaeb83545, type: 3}
       propertyPath: m_LocalRotation.w
@@ -28987,7 +29034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7423434671451986319, guid: 345b49d88911e5e488e5bf37aadf6795, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 328.18
+      value: 336.09
       objectReference: {fileID: 0}
     - target: {fileID: 7423434671451986319, guid: 345b49d88911e5e488e5bf37aadf6795, type: 3}
       propertyPath: m_LocalPosition.y
@@ -28995,7 +29042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7423434671451986319, guid: 345b49d88911e5e488e5bf37aadf6795, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1069.67
+      value: -1060.14
       objectReference: {fileID: 0}
     - target: {fileID: 7423434671451986319, guid: 345b49d88911e5e488e5bf37aadf6795, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33353,6 +33400,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: User Interface
       objectReference: {fileID: 0}
+    - target: {fileID: 8843881134405046555, guid: b31e617fb4bd27f458a25ef9249b5a91, type: 3}
+      propertyPath: pc
+      value: 
+      objectReference: {fileID: 1129532034}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b31e617fb4bd27f458a25ef9249b5a91, type: 3}
 --- !u!4 &1389008464 stripped
