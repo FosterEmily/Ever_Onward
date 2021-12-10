@@ -14,6 +14,8 @@ public class MenuContoller : MonoBehaviour
     GameObject pauseMenu;
     GameObject mainMenu;
     GameObject pauseText;
+    GameObject controlButton;
+    GameObject creditButton;
     public void Start()
     {
         optionsMenu = GameObject.Find("Settings");
@@ -25,9 +27,11 @@ public class MenuContoller : MonoBehaviour
         pauseMenu = GameObject.Find("PauseMenu");
         mainMenu = GameObject.Find("MainMenu");
         pauseText = GameObject.Find("Pause");
+        controlButton = GameObject.Find("Controls");
+        creditButton = GameObject.Find("Credits");
         optionsMenu.SetActive(false);
         loading.SetActive(false);
-        pauseMenu.SetActive(false);
+        if (pauseMenu != null) pauseMenu.SetActive(false);
     }
     public void Update()
     {
@@ -60,6 +64,8 @@ public class MenuContoller : MonoBehaviour
         playButton.SetActive(!playButton.activeSelf);
         optionsButton.SetActive(!optionsButton.activeSelf);
         quitButton.SetActive(!quitButton.activeSelf);
+        creditButton.SetActive(!creditButton.activeSelf);
+        controlButton.SetActive(!controlButton.activeSelf);
     }
 
     public void InGameOptions()

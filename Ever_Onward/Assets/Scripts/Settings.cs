@@ -12,9 +12,10 @@ public class Settings : MonoBehaviour
    
     public void Start()
     {
+        /*
         int currentResolutionIndex = 4;
-        resolutions = Screen.resolutions;
-        resDrop.ClearOptions();
+        //resolutions = Screen.resolutions;
+        //resDrop.ClearOptions();
         List<string> resOptions = new List<string>();
         
         for (int i = 4; i < resolutions.Length; i++)
@@ -33,6 +34,7 @@ public class Settings : MonoBehaviour
         resDrop.AddOptions(resOptions);
         resDrop.value = currentResolutionIndex;
         resDrop.RefreshShownValue();
+        */
     }
     public void Resolution(int resolutionIndex)
     {
