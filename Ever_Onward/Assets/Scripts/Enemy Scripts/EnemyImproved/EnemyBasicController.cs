@@ -56,11 +56,11 @@ public class EnemyBasicController : MonoBehaviour
                 {
                     if (enemy.isRangeEnemy == true || enemy.isRangeBoss == true)
                     {
-                        enemy.myNavMeshAgent.speed = 18f;
+                        enemy.myNavMeshAgent.speed = 14f;
                     }
                     if (enemy.isMeleeEnemy == true )
                     {
-                        enemy.myNavMeshAgent.speed = 22f;
+                        enemy.myNavMeshAgent.speed = 16f;
                     }
                     if(enemy.isMeleeBoss == true) enemy.myNavMeshAgent.speed = 15f;
                 }
@@ -236,6 +236,8 @@ public class EnemyBasicController : MonoBehaviour
     private float wanderTimer = 0;
     private bool isChasing;
     public Transform startLoc;
+    public string enemyName = "normal";
+
 
     // Start is called before the first frame update
     void Start()
@@ -490,7 +492,7 @@ public class EnemyBasicController : MonoBehaviour
         if (other.tag == "Wind")
         {
             health -= 2.5f;
-
+            print("damgewi");
             GetComponent<Renderer>().materials = thoseMats;
             rend.materials = thoseMats;
             if (health <= 0)
@@ -498,6 +500,14 @@ public class EnemyBasicController : MonoBehaviour
                 for (int i = 50; i > 0; i--)
                 {
                     Instantiate(cube, this.transform.position, this.transform.rotation);
+                }
+                if (enemyName == "west")
+                {
+                    PlayerPrefs.SetString("isWestDead", "true");
+                }
+                if (enemyName == "east")
+                {
+                    PlayerPrefs.SetString("isEastDead", "true");
                 }
                 Destroy(gameObject);
             }
@@ -507,6 +517,7 @@ public class EnemyBasicController : MonoBehaviour
         if (other.tag == "Bramble")
         {
             health -= 3;
+            print("damgebra");
             GetComponent<Renderer>().materials = thoseMats;
             rend.materials = thoseMats;
             if (health <= 0)
@@ -515,6 +526,14 @@ public class EnemyBasicController : MonoBehaviour
                 {
                     Instantiate(cube, this.transform.position, this.transform.rotation);
                 }
+                if (enemyName == "west")
+                {
+                    PlayerPrefs.SetString("isWestDead", "true");
+                }
+                if (enemyName == "east")
+                {
+                    PlayerPrefs.SetString("isEastDead", "true");
+                }
                 Destroy(gameObject);
             }
         }
@@ -522,6 +541,7 @@ public class EnemyBasicController : MonoBehaviour
         if (other.tag == "Siphon")
         {
             health--;
+            print("damgesi");
             GetComponent<Renderer>().materials = thoseMats;
             rend.materials = thoseMats;
             if (health <= 0)
@@ -529,6 +549,14 @@ public class EnemyBasicController : MonoBehaviour
                 for (int i = 50; i > 0; i--)
                 {
                     Instantiate(cube, this.transform.position, this.transform.rotation);
+                }
+                if (enemyName == "west")
+                {
+                    PlayerPrefs.SetString("isWestDead", "true");
+                }
+                if (enemyName == "east")
+                {
+                    PlayerPrefs.SetString("isEastDead", "true");
                 }
                 Destroy(gameObject);
             }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -20.0f;
     [SerializeField] [Range(0.0f, 0.5f)] float moveSmoothTime = 0.3f;
     [SerializeField] [Range(0.0f, 0.5f)] float mouseSmoothTime = 0.03f;
+    public static int LightsOn = 0;
 
     public bool lockCursor = true;
 
@@ -39,6 +41,9 @@ public class PlayerMovement : MonoBehaviour
     private float delta;
     CameraHandler cameraHandler;
 
+    Vector3 eastSpawnPoint;
+    Vector3 westSpawnPoint;
+
     /*public bool isGrounded
     {
         get
@@ -52,6 +57,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        if (SceneManager.GetActiveScene().name == "Forest")
+        {
+            eastSpawnPoint = GameObject.Find("eastSpawnPoint").transform.position;
+            westSpawnPoint = GameObject.Find("westSpawnPoint").transform.position;
+            if (PlayerPrefs.GetString("spawnLoc") == "West") this.transform.position = westSpawnPoint;
+            if (PlayerPrefs.GetString("spawnLoc") == "East") this.transform.position = eastSpawnPoint;
+            respawnPoint = GameObject.Find("RespawnPoint1");
+            respawnPosition1 = respawnPoint.transform.position;
+        }
         Time.timeScale = 1;
         controller = GetComponent<CharacterController>();
         cameraHandler = CameraHandler.singleton;
@@ -63,8 +77,7 @@ public class PlayerMovement : MonoBehaviour
         }
         PlayerPrefs.GetString("spawnLoc");
 
-        respawnPoint = GameObject.Find("RespawnPoint1");
-        respawnPosition1 = respawnPoint.transform.position;
+
 
     }
 
